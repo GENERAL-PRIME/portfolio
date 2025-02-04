@@ -1,27 +1,33 @@
 import { useState, useEffect } from "react";
-// import Image from "next/image"; // Or use <img> if you're not using Next.js
 
 export default function NavBar() {
   const [scrolling, setScrolling] = useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setScrolling(true);
-    } else {
-      setScrolling(false);
-    }
-  };
-
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <nav
       className={`fixed top-0 left-0 w-full flex items-center justify-between p-4 z-50 transition-all duration-300 ${
         scrolling
-          ? "bg-transparent bg-opacity-70 backdrop-blur-md "
+          ? "bg-transparent bg-opacity-70 backdrop-blur-md"
           : "bg-translucent"
       }`}
     >
@@ -38,20 +44,32 @@ export default function NavBar() {
         </span>
       </div>
 
-      {/* Centered Links */}
+      {/* Centered Links with Smooth Scroll */}
       <div className="flex-grow flex justify-center space-x-6 text-lg font-medium text-indigo-400">
-        <a href="#projects" className="hover:text-indigo-500">
+        <button
+          onClick={() => scrollToSection("projects")}
+          className="hover:text-indigo-500"
+        >
           Projects
-        </a>
-        <a href="#skills" className="hover:text-indigo-500">
+        </button>
+        <button
+          onClick={() => scrollToSection("skills")}
+          className="hover:text-indigo-500"
+        >
           Skills
-        </a>
-        <a href="#education" className="hover:text-indigo-500">
+        </button>
+        <button
+          onClick={() => scrollToSection("education")}
+          className="hover:text-indigo-500"
+        >
           Education
-        </a>
-        <a href="#contact" className="hover:text-indigo-500">
+        </button>
+        <button
+          onClick={() => scrollToSection("contact")}
+          className="hover:text-indigo-500"
+        >
           Contact
-        </a>
+        </button>
       </div>
 
       {/* Resume Button */}
