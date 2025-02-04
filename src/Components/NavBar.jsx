@@ -22,6 +22,9 @@ export default function NavBar() {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <nav
@@ -31,7 +34,7 @@ export default function NavBar() {
           : "bg-translucent"
       }`}
     >
-      <div className="flex items-center">
+      <div className="flex items-center cursor-pointer" onClick={scrollToTop}>
         <div className="relative w-12 h-12 rounded-full overflow-hidden">
           <img
             src="/path/to/your-photo.jpg" // Replace with your image file path
