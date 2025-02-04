@@ -39,17 +39,17 @@ export default function NavBar() {
       </div>
 
       {/* Centered Links */}
-      <div className="flex-grow flex justify-center space-x-6 text-lg font-medium text-indigo-600">
-        <a href="#projects" className="hover:text-indigo-700">
+      <div className="flex-grow flex justify-center space-x-6 text-lg font-medium text-indigo-400">
+        <a href="#projects" className="hover:text-indigo-500">
           Projects
         </a>
-        <a href="#skills" className="hover:text-indigo-700">
+        <a href="#skills" className="hover:text-indigo-500">
           Skills
         </a>
-        <a href="#education" className="hover:text-indigo-700">
+        <a href="#education" className="hover:text-indigo-500">
           Education
         </a>
-        <a href="#contact" className="hover:text-indigo-700">
+        <a href="#contact" className="hover:text-indigo-500">
           Contact
         </a>
       </div>
@@ -58,7 +58,7 @@ export default function NavBar() {
       <div className="flex items-center">
         <a
           href="/path/to/your-resume.pdf" // Replace with your resume link
-          className="px-6 py-2 border-2 border-indigo-600 text-indigo-600 rounded-full hover:bg-indigo-600 hover:text-white transition"
+          className="px-6 py-2 border-2 border-indigo-600 text-indigo-400 rounded-full hover:bg-indigo-600 hover:text-white transition"
           target="_blank"
           rel="noopener noreferrer"
         >
