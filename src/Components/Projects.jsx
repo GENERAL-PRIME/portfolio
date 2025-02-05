@@ -13,7 +13,7 @@ const projects = [
     title: "Website For Barasat Yoga Vigyan Kendra",
     description: "Website for Barasat Yoga Vigyan Kendra.",
     githubLink: "https://github.com/GENERAL-PRIME/BYVK-web",
-    image: "./portfolio/src/assets/Images/web.png",
+    image: "/portfolio/web.png",
   },
   {
     title: "School Dropout Analysis",
