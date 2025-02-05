@@ -7,7 +7,7 @@ const projects = [
       "A real-time AI-based traffic management system that dynamically adjusts traffic light timings based on vehicle density. It optimizes traffic flow, reduces congestion, and prioritizes emergency vehicles like ambulances.",
     githubLink:
       "https://github.com/GENERAL-PRIME/smart-traffic-light-controller",
-    image: "./portfolio/src/assets/Images/traffic.jpg",
+    image: "./portfolio/traffic.jpg",
   },
   {
     title: "Website For Barasat Yoga Vigyan Kendra",
@@ -20,7 +20,7 @@ const projects = [
     description:
       "School Dropout Analysis using Machine Learning & ANN | A modular project using SVM, Random Forest, and Artificial Neural Networks (ANNs) to predict school dropout rates.",
     githubLink: "https://github.com/GENERAL-PRIME/school-dropout-analysis",
-    image: trafficImage,
+    image: "/portfolio/school.jpg",
   },
 ];
 
