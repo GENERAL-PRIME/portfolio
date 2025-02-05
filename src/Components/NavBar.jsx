@@ -92,7 +92,7 @@ export default function NavBar() {
             )
           )}
           <a
-            href="porfolio/resume.pdf"
+            href="resume.pdf"
             className="px-6 py-2 border-2 border-indigo-600 text-indigo-400 rounded-full hover:bg-indigo-600 hover:text-white transition"
             target="_blank"
             rel="noopener noreferrer"
