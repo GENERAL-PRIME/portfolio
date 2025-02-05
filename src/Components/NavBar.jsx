@@ -43,12 +43,18 @@ export default function NavBar() {
           />
         </div>
         <span className="ml-2 text-xl font-bold text-indigo-600">
-          Your Name
+          Amborish Sen
         </span>
       </div>
 
       {/* Centered Links with Smooth Scroll */}
       <div className="flex-grow flex justify-center space-x-6 text-lg font-medium text-indigo-400">
+        <button
+          onClick={() => scrollToSection("about")}
+          className="hover:text-indigo-500"
+        >
+          About Me
+        </button>
         <button
           onClick={() => scrollToSection("projects")}
           className="hover:text-indigo-500"

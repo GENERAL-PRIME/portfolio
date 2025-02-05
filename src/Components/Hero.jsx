@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-export default function Hero() {
+export default function HeroSection() {
   const fullText = [
     "Hi, I’m Amborish Sen",
     "Full-Stack Developer & ML Enthusiast",
@@ -43,14 +43,21 @@ export default function Hero() {
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, textIndex]);
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="relative flex flex-col md:flex-row items-center justify-center h-screen px-12 overflow-hidden text-white">
+    <section className="relative flex flex-col md:flex-row items-center justify-center min-h-screen px-12 text-white overflow-hidden">
       {/* Background Gradient with Wave Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-indigo-800 to-indigo-900">
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-gray-800">
         <div className="absolute inset-0 wave-overlay"></div>
       </div>
 
-      {/* Left Side - Image */}
+      {/* Left Side - Profile Image */}
       <motion.div
         className="z-10 w-full md:w-1/2 flex justify-center"
         initial={{ opacity: 0, x: -50 }}
@@ -64,22 +71,35 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* Right Side - Text */}
+      {/* Right Side - Typing Text & CTA */}
       <motion.div
-        className="z-10 text-center w-full md:w-1/2 mt-8 md:mt-0"
+        className="z-10 text-center w-full md:w-1/2 mt-8 md:mt-0 flex flex-col items-center"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-5xl font-extrabold min-h-[60px]">
+        <h1 className="text-4xl md:text-5xl font-extrabold h-24 flex items-center justify-center">
           {displayText}
-          <span className="text-indigo-200">|</span>
         </h1>
         <a
-          href="#projects"
-          className="mt-6 inline-block px-6 py-3 text-lg font-medium bg-white text-indigo-600 rounded-lg shadow-md hover:bg-indigo-100 transition"
+          onClick={() => scrollToSection("projects")}
+          className="mt-12 inline-block px-6 py-3 text-lg font-medium bg-indigo-600 text-white rounded-lg shadow-md hover:bg-indigo-500 transition"
         >
           View Projects
+        </a>
+      </motion.div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        className="absolute bottom-10 animate-bounce"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+      >
+        <a onClick={() => scrollToSection("about")}>
+          <div className="w-10 h-10 border-2 border-indigo-400 rounded-full flex items-center justify-center">
+            ↓
+          </div>
         </a>
       </motion.div>
 
@@ -101,6 +121,6 @@ export default function Hero() {
           opacity: 0.5;
         }
       `}</style>
-    </div>
+    </section>
   );
 }

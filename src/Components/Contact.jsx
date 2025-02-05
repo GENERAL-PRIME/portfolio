@@ -3,7 +3,10 @@ import { Mail, Phone, Linkedin, Github } from "lucide-react";
 
 export default function Contact() {
   return (
-    <div id="contact" className="bg-gray-900 text-white py-16 px-8">
+    <div
+      id="contact"
+      className="bg-gradient-to-b from-gray-800 via-gray-900 to-black text-white py-16 px-8"
+    >
       <motion.div
         className="max-w-3xl mx-auto text-center"
         initial={{ opacity: 0, y: 50 }}
