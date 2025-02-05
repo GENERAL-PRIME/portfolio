@@ -40,9 +40,7 @@ export default function NavBar() {
             className="w-full h-full object-cover rounded-full"
           />
         </div>
-        <span className="ml-2 text-lg font-bold text-indigo-600">
-          Amborish Sen
-        </span>
+        <span className="ml-2 text-lg font-bold text-white">Amborish Sen</span>
       </div>
 
       {/* Desktop Navigation */}
@@ -94,7 +92,7 @@ export default function NavBar() {
             )
           )}
           <a
-            href="/portfolio/doc.pdf"
+            href="github.com/GENERAL-PRIME/porfolio/doc.pdf"
             className="px-6 py-2 border-2 border-indigo-600 text-indigo-400 rounded-full hover:bg-indigo-600 hover:text-white transition"
             target="_blank"
             rel="noopener noreferrer"
