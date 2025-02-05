@@ -1,4 +1,3 @@
-import trafficImage from "../assets/Images/traffic.jpg";
 import { motion } from "framer-motion";
 const projects = [
   {
@@ -7,7 +6,7 @@ const projects = [
       "A real-time AI-based traffic management system that dynamically adjusts traffic light timings based on vehicle density. It optimizes traffic flow, reduces congestion, and prioritizes emergency vehicles like ambulances.",
     githubLink:
       "https://github.com/GENERAL-PRIME/smart-traffic-light-controller",
-    image: "./portfolio/traffic.jpg",
+    image: "/portfolio/traffic.jpg",
   },
   {
     title: "Website For Barasat Yoga Vigyan Kendra",
