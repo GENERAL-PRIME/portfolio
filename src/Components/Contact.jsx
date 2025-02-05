@@ -21,7 +21,7 @@ export default function Contact() {
         <div className="space-y-6">
           {/* Phone */}
           <motion.a
-            href="tel:+1234567890" // Replace with your actual phone number
+            href="tel:+91 7980834697" // Replace with your actual phone number
             className="flex items-center justify-center gap-3 text-lg hover:text-indigo-400 transition"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ export default function Contact() {
 
           {/* Email */}
           <motion.a
-            href="mailto:your.email@example.com" // Replace with your email
+            href="mailto:amborish.sen.work@gmail.com" // Replace with your email
             className="flex items-center justify-center gap-3 text-lg hover:text-indigo-400 transition"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
