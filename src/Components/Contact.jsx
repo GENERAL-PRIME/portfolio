@@ -27,7 +27,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Phone className="w-6 h-6" /> +91 7980834697
+            <Phone className="w-6 h-6" /> +91 79808-34697
           </motion.a>
 
           {/* Email */}
