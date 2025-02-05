@@ -61,7 +61,7 @@ export default function NavBar() {
       {/* Resume Button - Always Visible */}
       <div className="hidden md:flex items-center">
         <a
-          href="https://GENERAL-PRIME.github.io/portfolio/resume.pdf"
+          href="porfolio/resume.pdf"
           className="px-6 py-2 border-2 border-indigo-600 text-indigo-400 rounded-full hover:bg-indigo-600 hover:text-white transition"
           target="_blank"
           rel="noopener noreferrer"
@@ -92,7 +92,7 @@ export default function NavBar() {
             )
           )}
           <a
-            href="https://GENERAL-PRIME.github.io/portfolio/resume.pdf"
+            href="porfolio/resume.pdf"
             className="px-6 py-2 border-2 border-indigo-600 text-indigo-400 rounded-full hover:bg-indigo-600 hover:text-white transition"
             target="_blank"
             rel="noopener noreferrer"
