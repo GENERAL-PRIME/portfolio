@@ -65,7 +65,7 @@ export default function HeroSection() {
         transition={{ duration: 1 }}
       >
         <img
-          src="portfolio\src\assets\Images\my_photo_recent-removebg-preview.png" // Change this to your actual image path
+          src="./portfolio/src/assets/Images/my_photo_recent-removebg-preview.png" // Change this to your actual image path
           alt="Amborish Sen"
           className="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-lg object-cover"
         />

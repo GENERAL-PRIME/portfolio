@@ -35,7 +35,7 @@ export default function NavBar() {
       <div className="flex items-center cursor-pointer" onClick={scrollToTop}>
         <div className="relative w-10 h-10 rounded-full overflow-hidden">
           <img
-            src="portfolio\src\assets\Images\modern_logo-removebg-preview.png"
+            src="./portfolio/src/assets/Images/modern_logo-removebg-preview.png"
             alt="Your Name"
             className="w-full h-full object-cover rounded-full"
           />
