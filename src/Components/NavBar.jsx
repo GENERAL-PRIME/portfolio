@@ -1,17 +1,14 @@
 import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react"; // Import icons for mobile menu
 
 export default function NavBar() {
   const [scrolling, setScrolling] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
+      setScrolling(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -20,71 +17,53 @@ export default function NavBar() {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false); // Close menu on mobile after clicking
     }
   };
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setMenuOpen(false);
   };
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full flex items-center justify-between p-4 z-50 transition-all duration-300 ${
-        scrolling
-          ? "bg-transparent bg-opacity-70 backdrop-blur-md"
-          : "bg-translucent"
+      className={`fixed top-0 left-0 w-full flex items-center justify-between p-4 z-50 transition-all duration-300 backdrop-blur-md ${
+        scrolling ? "bg-translucent bg-opacity-70" : "bg-transparent"
       }`}
     >
+      {/* Logo */}
       <div className="flex items-center cursor-pointer" onClick={scrollToTop}>
-        <div className="relative w-12 h-12 rounded-full overflow-hidden">
+        <div className="relative w-10 h-10 rounded-full overflow-hidden">
           <img
-            src="/path/to/your-photo.jpg" // Replace with your image file path
+            src="portfolio\src\assets\Images\modern_logo-removebg-preview.png"
             alt="Your Name"
             className="w-full h-full object-cover rounded-full"
           />
         </div>
-        <span className="ml-2 text-xl font-bold text-indigo-600">
+        <span className="ml-2 text-lg font-bold text-indigo-600">
           Amborish Sen
         </span>
       </div>
 
-      {/* Centered Links with Smooth Scroll */}
-      <div className="flex-grow flex justify-center space-x-6 text-lg font-medium text-indigo-400">
-        <button
-          onClick={() => scrollToSection("about")}
-          className="hover:text-indigo-500"
-        >
-          About Me
-        </button>
-        <button
-          onClick={() => scrollToSection("projects")}
-          className="hover:text-indigo-500"
-        >
-          Projects
-        </button>
-        <button
-          onClick={() => scrollToSection("skills")}
-          className="hover:text-indigo-500"
-        >
-          Skills
-        </button>
-        <button
-          onClick={() => scrollToSection("education")}
-          className="hover:text-indigo-500"
-        >
-          Education
-        </button>
-        <button
-          onClick={() => scrollToSection("contact")}
-          className="hover:text-indigo-500"
-        >
-          Contact
-        </button>
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex space-x-6 text-lg font-medium text-indigo-400">
+        {["about", "projects", "skills", "education", "contact"].map(
+          (section) => (
+            <button
+              key={section}
+              onClick={() => scrollToSection(section)}
+              className="hover:text-indigo-500"
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </button>
+          )
+        )}
       </div>
 
-      {/* Resume Button */}
-      <div className="flex items-center">
+      {/* Resume Button - Always Visible */}
+      <div className="hidden md:flex items-center">
         <a
-          href="/path/to/your-resume.pdf" // Replace with your resume link
+          href="/path/to/your-resume.pdf"
           className="px-6 py-2 border-2 border-indigo-600 text-indigo-400 rounded-full hover:bg-indigo-600 hover:text-white transition"
           target="_blank"
           rel="noopener noreferrer"
@@ -92,6 +71,38 @@ export default function NavBar() {
           Resume
         </a>
       </div>
+
+      {/* Mobile Menu Button */}
+      <div className="md:hidden flex items-center">
+        <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
+          {menuOpen ? <X size={30} /> : <Menu size={30} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="absolute top-16 left-0 w-full bg-black bg-opacity-90 flex flex-col items-center p-4 space-y-4 text-lg font-medium text-indigo-400 md:hidden">
+          {["about", "projects", "skills", "education", "contact"].map(
+            (section) => (
+              <button
+                key={section}
+                onClick={() => scrollToSection(section)}
+                className="hover:text-indigo-500"
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </button>
+            )
+          )}
+          <a
+            href="/path/to/your-resume.pdf"
+            className="px-6 py-2 border-2 border-indigo-600 text-indigo-400 rounded-full hover:bg-indigo-600 hover:text-white transition"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
+        </div>
+      )}
     </nav>
   );
 }

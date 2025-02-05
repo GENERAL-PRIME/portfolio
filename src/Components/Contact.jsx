@@ -27,7 +27,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Phone className="w-6 h-6" /> +91 9876543210
+            <Phone className="w-6 h-6" /> +91 7980834697
           </motion.a>
 
           {/* Email */}
@@ -38,12 +38,12 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <Mail className="w-6 h-6" /> your.email@example.com
+            <Mail className="w-6 h-6" /> amborish.sen.work@gmail.com
           </motion.a>
 
           {/* LinkedIn */}
           <motion.a
-            href="https://www.linkedin.com/in/yourprofile" // Replace with your LinkedIn
+            href="https://www.linkedin.com/in/amborish-sen-0775b8202/" // Replace with your LinkedIn
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 text-lg hover:text-indigo-400 transition"
@@ -51,12 +51,13 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            <Linkedin className="w-6 h-6" /> linkedin.com/in/yourprofile
+            <Linkedin className="w-6 h-6" />{" "}
+            linkedin.com/in/amborish-sen-0775b8202
           </motion.a>
 
           {/* GitHub */}
           <motion.a
-            href="https://github.com/yourgithub" // Replace with your GitHub
+            href="https://github.com/GENERAL-PRIME" // Replace with your GitHub
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 text-lg hover:text-indigo-400 transition"
@@ -64,7 +65,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
           >
-            <Github className="w-6 h-6" /> github.com/yourgithub
+            <Github className="w-6 h-6" /> github.com/GENERAL-PRIME
           </motion.a>
         </div>
       </motion.div>

@@ -1,22 +1,25 @@
 import { motion } from "framer-motion";
 const projects = [
   {
-    title: "Project 1",
-    description: "This is a description for Project 1.",
-    githubLink: "https://github.com/yourusername/project1",
-    image: "/path-to-image.jpg",
+    title: "Smart Traffic Light Controller",
+    description:
+      "A real-time AI-based traffic management system that dynamically adjusts traffic light timings based on vehicle density. It optimizes traffic flow, reduces congestion, and prioritizes emergency vehicles like ambulances.",
+    githubLink:
+      "https://github.com/GENERAL-PRIME/smart-traffic-light-controller",
+    image: "portfolio/src/assets/Images/traffic.jpg",
   },
   {
-    title: "Project 2",
-    description: "This is a description for Project 2.",
-    githubLink: "https://github.com/yourusername/project2",
-    image: "/path-to-image.jpg",
+    title: "Website For Barasat Yoga Vigyan Kendra",
+    description: "Website for Barasat Yoga Vigyan Kendra.",
+    githubLink: "https://github.com/GENERAL-PRIME/BYVK-web",
+    image: "portfolio/src/assets/Images/web.png",
   },
   {
-    title: "Project 3",
-    description: "This is a description for Project 3.",
-    githubLink: "https://github.com/yourusername/project3",
-    image: "/path-to-image.jpg",
+    title: "School Dropout Analysis",
+    description:
+      "School Dropout Analysis using Machine Learning & ANN | A modular project using SVM, Random Forest, and Artificial Neural Networks (ANNs) to predict school dropout rates.",
+    githubLink: "https://github.com/GENERAL-PRIME/school-dropout-analysis",
+    image: "portfolio/src/assets/Images/school.jpg",
   },
 ];
 
@@ -79,7 +82,7 @@ export default function Projects() {
                 rel="noopener noreferrer"
                 className="text-indigo-300 hover:text-indigo-500 transition duration-200"
               >
-                View on GitHub
+                View Project
               </a>
             </motion.div>
           ))}
