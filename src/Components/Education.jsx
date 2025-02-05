@@ -14,7 +14,7 @@ const education = [
   },
   {
     title: "College",
-    institution: "ABC University",
+    institution: "Techno International Newtown",
     year: "2022 - 2026",
     icon: <FaUniversity className="text-blue-400 text-3xl" />,
     description:
