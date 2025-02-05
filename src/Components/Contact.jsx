@@ -51,8 +51,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            <Linkedin className="w-6 h-6" />{" "}
-            linkedin.com/in/amborish-sen-0775b8202
+            <Linkedin className="w-6 h-6" /> linkedin.com/in/amborish-sen
           </motion.a>
 
           {/* GitHub */}
