@@ -46,7 +46,7 @@ export default function Contact() {
             href="https://www.linkedin.com/in/amborish-sen-0775b8202/" // Replace with your LinkedIn
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 text-lg hover:text-indigo-400 transition"
+            className="flex items-center justify-center gap-3 text-lg hover:text-blue-400 transition"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
@@ -72,7 +72,7 @@ export default function Contact() {
             href="https://wa.me/917980834697" // Replace with your WhatsApp link
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 text-lg hover:text-indigo-400 transition"
+            className="flex items-center justify-center gap-3 text-lg hover:text-green-400 transition"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.0 }}
