@@ -41,7 +41,7 @@ export default function AboutMe() {
         , working with
         <span className="text-indigo-300">
           {" "}
-          ReactJS, NodeJS, TypeScript, and PostgreSQL
+          ReactJS, NodeJS, JavaScript, and PostgreSQL
         </span>
         .
       </motion.p>
