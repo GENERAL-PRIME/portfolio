@@ -66,6 +66,24 @@ export default function Contact() {
           >
             <Github className="w-6 h-6" /> github.com/GENERAL-PRIME
           </motion.a>
+
+          {/* WhatsApp */}
+          <motion.a
+            href="https://wa.me/917980834697" // Replace with your WhatsApp link
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-3 text-lg hover:text-indigo-400 transition"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.0 }}
+          >
+            <img
+              src="/portfolio/whatsapp-svgrepo-com.svg"
+              alt="WhatsApp"
+              className="w-6 h-6 filter invert"
+            />{" "}
+            WhatsApp Chat
+          </motion.a>
         </div>
       </motion.div>
     </div>
