@@ -36,7 +36,7 @@ export default function NavBar() {
         <div className="relative w-10 h-10 rounded-full overflow-hidden">
           <img
             src="/portfolio/modern_logo-removebg-preview.png"
-            alt="Your Name"
+            alt="Amborish Sen"
             className="w-full h-full object-cover rounded-full"
           />
         </div>
