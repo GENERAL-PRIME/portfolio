@@ -21,6 +21,28 @@ const projects = [
     githubLink: "https://github.com/GENERAL-PRIME/school-dropout-analysis",
     image: "/portfolio/school.jpg",
   },
+  {
+    title: "Wordle Solver",
+    description:
+      "An Entropy-optimal Wordle solver. It uses a FastAPI backend with mem-map precomputations to deliver instant, mathematically proven suggestions. It features a modern web UI that allows users to cycle through tile colors & refine candidate lists in real-time using information theory to maximize info gain.A Wordle solver using Python and machine learning techniques to predict the most likely words based on previous guesses.",
+    githubLink: "https://github.com/GENERAL-PRIME/wordle-solver",
+    image: "/portfolio/wordle.png",
+  },
+  {
+    title: "BYVK Student Management System",
+    description:
+      "A comprehensive web-based dashboard application for managing yoga institute students, batches, and payment tracking with receipt management. Built using the MERN stack (PostgreSQL, Supabase, React.js, Node.js, OAuth) to provide a seamless user experience for administrators and staff.",
+    githubLink: "https://github.com/GENERAL-PRIME/yoga-students",
+    image: "/portfolio/students.jpg",
+  },
+  {
+    title: "Nutrition Recommendation Model",
+    description:
+      "A Python-based nutrition recommendation system that provides personalized dietary suggestions. It utilizes user health data and preferences to generate tailored meal plans and nutritional advice. The model leverages Decision Tree ML algorithm and NLP to analyze dietary patterns and optimize nutrition for better health outcomes.",
+    githubLink:
+      "https://github.com/GENERAL-PRIME/personal-nutri-recommend-sys/tree/amborish-dev",
+    image: "/portfolio/nrs.jpg",
+  },
 ];
 
 export default function Projects() {
